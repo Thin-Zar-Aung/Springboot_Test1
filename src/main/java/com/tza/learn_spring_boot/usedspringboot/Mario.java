@@ -1,9 +1,11 @@
 package com.tza.learn_spring_boot.usedspringboot;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary
 
 public class Mario implements NitendoInterface {
 

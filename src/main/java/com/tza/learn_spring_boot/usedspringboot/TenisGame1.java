@@ -1,5 +1,8 @@
 package com.tza.learn_spring_boot.usedspringboot;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TenisGame1 implements NitendoInterface{
 
 	public void play() {

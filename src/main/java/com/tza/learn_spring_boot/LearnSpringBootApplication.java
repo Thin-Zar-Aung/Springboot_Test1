@@ -8,6 +8,7 @@ import com.tza.learn_spring_boot.game.Nitendo;
 import com.tza.learn_spring_boot.game.SwitchGame;
 import com.tza.learn_spring_boot.Interface.Mario;
 import com.tza.learn_spring_boot.usedspringboot.*;
+import com.tza.learn_spring_boot.web.controller.MyWebController;
 
 @SpringBootApplication
 public class LearnSpringBootApplication {
@@ -35,5 +36,10 @@ public class LearnSpringBootApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(LearnSpringBootApplication.class, args);
 		Nitendo1 nirunner = context.getBean(Nitendo1.class);
 		nirunner.run();
+		
+		MyWebController controller = context.getBean(MyWebController.class);
+		long res =controller.getValueFromService();
+		System.out.println("Res is" + res);
+		
 	}
 	}
